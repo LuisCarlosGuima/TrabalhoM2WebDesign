@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header id="main-header">
+    <div class="container">
+      <h1>Meu Portfólio</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#sobre-mim">Sobre mim</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle">Menu</button>
+    </div>
+  </header>
+  
+  <div class="banner">
+    <img src="imagem1.png" alt="Banner 1" class="ativo">
+    <img src="imagem2.png" alt="Banner 2">
+  </div>
+    <section id="sobre-mim">
+      <div class="container">
+        <h2>Sobre mim</h2>
+        <p>Olá! Meu nome é Fulano e sou um desenvolvedor web apaixonado por tecnologia. Tenho experiência em diversas
+          áreas, como front-end, back-end e banco de dados. Atualmente estou em busca de novos desafios e oportunidades
+          de aprendizado.</p>
+      </div>
+    </section>
+    <section id="projetos">
+      <div class="container">
+        <h2>Projetos</h2>
+        <ul>
+          <li>
+            <h3>Projeto 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed hendrerit nisi vel mauris efficitur, quis
+              mollis ipsum lacinia. Fusce non ipsum a eros blandit consequat nec nec leo. Sed in risus non libero
+              facilisis lobortis vel vel elit.</p>
+            <a href="#">Ver projeto</a>
+          </li>
+          <li>
+            <h3>Projeto 2</h3>
+            <p>Nulla consectetur consectetur tellus, eu consequat eros facilisis id. Pellentesque vel nisl nec enim
+              tincidunt pellentesque. Sed eu augue quis sapien efficitur euismod. Suspendisse eu lectus non mauris
+              hendrerit finibus.</p>
+            <a href="#">Ver projeto</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section id="contato">
+      <div class="container">
+        <h2>Contato</h2>
+        <form action="#">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 - Todos os direitos reservados</p>
+      </div>
+    </footer>
+  
+</body>
+
+</html>
+
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+}
+section#projetos li:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+section {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form label, form input, form textarea {
+  display: block;
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  #video-background {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  h1 {
+    float: left;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    margin-right: 20px;
+  }
+
+  nav {
+    float: right;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  section {
+    padding: 100px 0;
+    background-color: #fff;
+  }
+
+  section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  section p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 50px;
+  }
+
+  li h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  li p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  li a:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  button[type="submit"] {
+    display: block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #fff;
+    color: #000;
+  }
+
+  footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer p {
+    font-size: 18px;
+  }
+
+  section#sobre-mim {
+    padding: 150px 0 100px;
+  }
+
+  header#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+
+  header#main-header.hide {
+    transform: translateY(-100%);
+  }
+
+  button#menu-toggle {
+    display: none;
+  }
+  .banner {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 150px;
+  z-index: -1;
+}
+
+.banner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.banner img.ativo {
+  opacity: 1;
+}
+
+</style>
+
+<script>
+  const header = document.querySelector('#main-header');
+  const menuToggle = document.querySelector('#menu-toggle');
+
+  menuToggle.addEventListener('click', () => {
+    header.classList.toggle('hide');
+  });
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > header.offsetHeight) {
+      header.classList.add('hide');
+    } else {
+      header.classList.remove('hide');
+    }
+  });
+
+  var imagens = document.querySelectorAll('.banner img');
+var indice = 0;
+setInterval(function() {
+  imagens[indice].classList.remove('ativo');
+  indice++;
+  if (indice >= imagens.length) {
+    indice = 0;
+  }
+  imagens[indice].classList.add('ativo');
+}, 5000); // troca a cada 5 segundos
+
+</script>
